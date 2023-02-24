@@ -1,0 +1,37 @@
+<div class="p-text-center">{{ tituloPagina }}</div>
+<div class="p-fluid">
+  <div class="p-field">
+    <label for="nome">Nome</label>
+    <input id="nome" type="text" pInputText [(ngModel)]="usuario.nome" />
+  </div>
+  <div class="p-field">
+    <label for="login">Login</label>
+    <input id="login" type="text" pInputText [(ngModel)]="usuario.login" />
+  </div>
+  <div class="p-field">
+    <label for="email">E-mail</label>
+    <input id="email" type="email" pInputText [(ngModel)]="usuario.email" />
+  </div>
+  <div class="p-field">
+    <label for="senha">Senha</label>
+    <input id="senha" type="password" pInputText [(ngModel)]="usuario.senha" />
+  </div>
+  <div class="p-field">
+    <label for="dataNascimento">Data Nascimento</label>
+    <input
+      id="dataNascimento"
+      type="date"
+      pInputText
+      [(ngModel)]="usuario.dataNascimento"
+    />
+  </div>
+  <div class="p-my-3">
+    <button
+      pButton
+      type="button"
+      label="Salvar"
+      class="p-button-success"
+      (click)="adicionarUsuario()"
+    ></button>
+  </div>
+</div>

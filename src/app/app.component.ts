@@ -1,45 +1,43 @@
-import { Component, OnInit } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { Component, OnInit } from "@angular/core";
+import { MenuItem } from "primeng/api";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
 export class AppComponent implements OnInit {
-
-  title = 'hackathon-angular';
+  title = "hackathon-angular";
   items: MenuItem[];
 
   ngOnInit(): void {
-    this.items = [{
-      label: 'Options',
-      items: [{
-        label: 'Update',
-        icon: 'pi pi-refresh',
-        command: () => {
-        }
-      },
-        {
-          label: 'Delete',
-          icon: 'pi pi-times',
-          command: () => {
-          }
-        }
-      ]},
+    this.items = [
+      { label: "Home", icon: "pi pi-fw pi-home", routerLink: ["/home"] },
       {
-        label: 'Navigate',
-        items: [{
-          label: 'Angular Website',
-          icon: 'pi pi-external-link',
-          url: 'http://angular.io'
-        },
-          {
-            label: 'Router',
-            icon: 'pi pi-upload',
-            routerLink: '/fileupload'
-          }
-        ]}
+        label: "Cadastrar",
+        icon: "pi pi-fw pi-user-plus",
+        routerLink: ["/cadastro"],
+      },
+      {
+        label: "Buscar por Id",
+        icon: "pi pi-fw pi-search",
+        routerLink: ["/buscaid"],
+      },
+      {
+        label: "Aniversariantes",
+        icon: "pi pi-fw pi-calendar",
+        routerLink: ["/aniversario"],
+      },
+      {
+        label: "Primeira Letra",
+        icon: "pi pi-fw pi-filter",
+        routerLink: ["/inicial"],
+      },
+      {
+        label: "Provedor E-mail",
+        icon: "pi pi-fw pi-id-card",
+        routerLink: ["/email"],
+      },
     ];
   }
 }
